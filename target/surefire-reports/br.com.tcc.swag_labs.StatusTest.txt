@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.tcc.swag_labs.StatusTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.32 s -- in br.com.tcc.swag_labs.StatusTest
