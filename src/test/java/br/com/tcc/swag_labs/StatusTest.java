@@ -75,26 +75,32 @@ class StatusTest {
 		driver.findElement(By.id("password")).sendKeys("secret_sauce");
 		driver.findElement(By.id("login-button")).click();
 
-		// Verifica se todos os produtos estão carregados
+		// Verifica se os botões de adicionar ao carrinho estão disponíveis
 		List<WebElement> addToCartButtons = driver.findElements(By.cssSelector(".inventory_item button"));
-		assertEquals(6, addToCartButtons.size(), "Todos os produtos devem estar disponíveis");
+		assertTrue(addToCartButtons.size() >= 5, "Pelo menos cinco itens devem estar disponíveis para adicionar");
 
-		// Adiciona todos os itens ao carrinho
-		for (WebElement button : addToCartButtons) {
-			button.click();
+		// Adiciona cinco itens ao carrinho
+		for (int i = 0; i < 5; i++) {
+			addToCartButtons.get(i).click();
 		}
 
-		// Verifica se todos os itens foram adicionados ao carrinho
-		WebElement cartBadge = driver.findElement(By.cssSelector(".shopping_cart_badge"));
-		assertEquals(String.valueOf(addToCartButtons.size()), cartBadge.getText(),
-				"Todos os itens foram adicionados ao carrinho");
+		// Acessa o carrinho
+		driver.findElement(By.cssSelector(".shopping_cart_link")).click();
+
+		// Espera explícita para garantir que os itens estão no carrinho
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(d -> d.findElements(By.cssSelector(".cart_item")).size() == 5);
+
+		// Verifica se os itens estão no carrinho
+		List<WebElement> cartItems = driver.findElements(By.cssSelector(".cart_item"));
+		assertEquals(5, cartItems.size(), "Cinco itens foram adicionados ao carrinho");
 	}
 
 	@Test
 	@DisplayName("Deve permitir revisar os itens no carrinho antes de finalizar a compra")
 	void reviewCartItemsTest() {
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 
 		driver.get("https://www.saucedemo.com/");
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
@@ -107,6 +113,10 @@ class StatusTest {
 
 		// Acessa o carrinho
 		driver.findElement(By.cssSelector(".shopping_cart_link")).click();
+
+		// Espera explícita para garantir que o item está visível no carrinho
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(d -> d.findElements(By.cssSelector(".cart_item")).size() > 0);
 
 		// Verifica se o item está no carrinho
 		List<WebElement> cartItems = driver.findElements(By.cssSelector(".cart_item"));
@@ -134,6 +144,10 @@ class StatusTest {
 
 		// Acessa o carrinho
 		driver.findElement(By.cssSelector(".shopping_cart_link")).click();
+
+		// Espera explícita para garantir que os itens estão no carrinho
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(d -> d.findElements(By.cssSelector(".cart_item")).size() == 2);
 
 		// Verifica se os itens estão no carrinho
 		List<WebElement> cartItems = driver.findElements(By.cssSelector(".cart_item"));

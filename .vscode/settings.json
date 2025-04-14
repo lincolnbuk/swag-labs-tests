@@ -20,6 +20,7 @@
         "casos",
         "catálogo",
         "Católica",
+        "cinco",
         "Clonar",
         "comando",
         "Conectando",
@@ -38,6 +39,7 @@
         "encerra",
         "enquanto",
         "escolha",
+        "Espera",
         "essenciais",
         "está",
         "estão",
@@ -47,6 +49,7 @@
         "exibidos",
         "exibindo",
         "exibir",
+        "explícita",
         "facillitar",
         "foram",
         "fornecer",
@@ -118,5 +121,6 @@
         "visível",
         "visualização",
         "Visualizar"
-    ]
+    ],
+    "java.format.settings.url": ".vscode/java-formatter.xml"
 }

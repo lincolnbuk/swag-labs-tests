@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="br.com.tcc.swag_labs.StatusTest" time="29.067" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="br.com.tcc.swag_labs.StatusTest" time="29.496" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\java\jdk-21_windows-x64_bin\jdk-21.0.6\bin"/>
-    <property name="sun.java.command" value="C:\Users\lincoln\AppData\Local\Temp\surefire11067241262854815467\surefirebooter-20250409211750466_3.jar C:\Users\lincoln\AppData\Local\Temp\surefire11067241262854815467 2025-04-09T21-17-50_090-jvmRun1 surefire-20250409211750466_1tmp surefire_0-20250409211750466_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\lincoln\AppData\Local\Temp\surefire4758442770948947927\surefirebooter-20250414122040986_3.jar C:\Users\lincoln\AppData\Local\Temp\surefire4758442770948947927 2025-04-14T12-20-40_688-jvmRun1 surefire-20250414122040986_1tmp surefire_0-20250414122040986_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Tcc\Projects\swag-labs-tests\target\test-classes;C:\Tcc\Projects\swag-labs-tests\target\classes;C:\Users\lincoln\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\lincoln\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\lincoln\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\lincoln\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\lincoln\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\lincoln\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\lincoln\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\lincoln\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-java\4.20.0\selenium-java-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-api\4.20.0\selenium-api-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.20.0\selenium-chrome-driver-4.20.0.jar;C:\Users\lincoln\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.20.0\selenium-chromium-driver-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-json\4.20.0\selenium-json-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.20.0\selenium-manager-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.20.0\selenium-devtools-v122-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.20.0\selenium-devtools-v123-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.20.0\selenium-devtools-v124-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.20.0\selenium-devtools-v85-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.20.0\selenium-edge-driver-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.20.0\selenium-firefox-driver-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-http\4.20.0\selenium-http-4.20.0.jar;C:\Users\lincoln\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.20.0\selenium-ie-driver-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.20.0\selenium-remote-driver-4.20.0.jar;C:\Users\lincoln\.m2\repository\com\google\guava\guava\33.1.0-jre\guava-33.1.0-jre.jar;C:\Users\lincoln\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\lincoln\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\lincoln\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\lincoln\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\lincoln\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\lincoln\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\opentelemetry-api\1.37.0\opentelemetry-api-1.37.0.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\opentelemetry-context\1.37.0\opentelemetry-context-1.37.0.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.37.0\opentelemetry-exporter-logging-1.37.0.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.37.0\opentelemetry-sdk-common-1.37.0.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.37.0\opentelemetry-sdk-extension-autoconfigure-spi-1.37.0.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.37.0\opentelemetry-sdk-extension-autoconfigure-1.37.0.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.37.0-alpha\opentelemetry-api-incubator-1.37.0-alpha.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.37.0\opentelemetry-sdk-trace-1.37.0.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.37.0\opentelemetry-sdk-1.37.0.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.37.0\opentelemetry-sdk-metrics-1.37.0.jar;C:\Users\lincoln\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.37.0\opentelemetry-sdk-logs-1.37.0.jar;C:\Users\lincoln\.m2\repository\net\bytebuddy\byte-buddy\1.14.14\byte-buddy-1.14.14.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-os\4.20.0\selenium-os-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.20.0\selenium-safari-driver-4.20.0.jar;C:\Users\lincoln\.m2\repository\org\seleniumhq\selenium\selenium-support\4.20.0\selenium-support-4.20.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\lincoln\AppData\Local\Temp\surefire11067241262854815467\surefirebooter-20250409211750466_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\lincoln\AppData\Local\Temp\surefire4758442770948947927\surefirebooter-20250414122040986_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.6+8-LTS-188"/>
@@ -50,7 +50,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\java\jdk-21_windows-x64_bin\jdk-21.0.6\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\java\jdk-21_windows-x64_bin\jdk-21.0.6\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Users\lincoln\AppData\Local\nvm;C:\nvm4w\nodejs;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\lincoln\Downloads\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;C:\Users\lincoln\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\lincoln\AppData\Local\Programs\Python\Python313\;C:\Users\lincoln\AppData\Local\Microsoft\WindowsApps;C:\Users\lincoln\AppData\Local\nvm;C:\nvm4w\nodejs;C:\Users\lincoln\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.3\bin;C:\Users\lincoln\Downloads\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;;c:\Users\lincoln\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;."/>
+    <property name="java.library.path" value="C:\Program Files\java\jdk-21_windows-x64_bin\jdk-21.0.6\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\java\jdk-21_windows-x64_bin\jdk-21.0.6\bin\C:\Program Files\java\jdk-21_windows-x64_bin\jdk-21.0.6\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Users\lincoln\AppData\Local\nvm;C:\nvm4w\nodejs;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\lincoln\Downloads\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;C:\Users\lincoln\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\lincoln\AppData\Local\Programs\Python\Python313\;C:\Users\lincoln\AppData\Local\Microsoft\WindowsApps;C:\Users\lincoln\AppData\Local\nvm;C:\nvm4w\nodejs;C:\Users\lincoln\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.3\bin;C:\Users\lincoln\Downloads\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;;c:\Users\lincoln\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -58,54 +58,54 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="reviewCartItemsTest" classname="br.com.tcc.swag_labs.StatusTest" time="6.361">
-    <system-err><![CDATA[abr. 09, 2025 9:17:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="reviewCartItemsTest" classname="br.com.tcc.swag_labs.StatusTest" time="6.096">
+    <system-err><![CDATA[abr. 14, 2025 12:20:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-abr. 09, 2025 9:17:55 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+abr. 14, 2025 12:20:45 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="addMultipleItemsToCartTest" classname="br.com.tcc.swag_labs.StatusTest" time="4.327">
-    <system-err><![CDATA[abr. 09, 2025 9:17:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="addMultipleItemsToCartTest" classname="br.com.tcc.swag_labs.StatusTest" time="4.218">
+    <system-err><![CDATA[abr. 14, 2025 12:20:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-abr. 09, 2025 9:17:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+abr. 14, 2025 12:20:50 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="siteStatusTest" classname="br.com.tcc.swag_labs.StatusTest" time="3.105">
+  <testcase name="siteStatusTest" classname="br.com.tcc.swag_labs.StatusTest" time="3.166">
     <system-out><![CDATA[Status do site: Swag Labs
 ]]></system-out>
-    <system-err><![CDATA[abr. 09, 2025 9:18:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[abr. 14, 2025 12:20:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-abr. 09, 2025 9:18:03 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+abr. 14, 2025 12:20:54 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="addItemToCartTest" classname="br.com.tcc.swag_labs.StatusTest" time="3.491">
-    <system-err><![CDATA[abr. 09, 2025 9:18:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="addItemToCartTest" classname="br.com.tcc.swag_labs.StatusTest" time="4.146">
+    <system-err><![CDATA[abr. 14, 2025 12:20:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-abr. 09, 2025 9:18:06 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+abr. 14, 2025 12:20:57 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="validLoginTest" classname="br.com.tcc.swag_labs.StatusTest" time="3.976">
-    <system-err><![CDATA[abr. 09, 2025 9:18:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="validLoginTest" classname="br.com.tcc.swag_labs.StatusTest" time="4.014">
+    <system-err><![CDATA[abr. 14, 2025 12:21:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-abr. 09, 2025 9:18:10 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+abr. 14, 2025 12:21:01 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="adjustCartItemQuantityTest" classname="br.com.tcc.swag_labs.StatusTest" time="4.032">
-    <system-err><![CDATA[abr. 09, 2025 9:18:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="adjustCartItemQuantityTest" classname="br.com.tcc.swag_labs.StatusTest" time="3.865">
+    <system-err><![CDATA[abr. 14, 2025 12:21:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-abr. 09, 2025 9:18:14 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+abr. 14, 2025 12:21:05 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="displayProductsOnHomePageTest" classname="br.com.tcc.swag_labs.StatusTest" time="3.694">
-    <system-err><![CDATA[abr. 09, 2025 9:18:18 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="displayProductsOnHomePageTest" classname="br.com.tcc.swag_labs.StatusTest" time="3.909">
+    <system-err><![CDATA[abr. 14, 2025 12:21:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-abr. 09, 2025 9:18:18 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+abr. 14, 2025 12:21:09 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.20.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
