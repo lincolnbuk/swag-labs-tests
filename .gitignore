@@ -1,0 +1,28 @@
+# Compilados Java
+/target/
+*.class
+
+# Drivers de navegador
+chromedriver.exe
+geckodriver.exe
+msedgedriver.exe
+
+# Arquivos de log e dumps
+*.dump
+*.dumpstream
+
+# Relatórios de teste
+*.xml
+*.txt
+
+# Configurações do sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+/.idea/
+*.iml
+*.vscode/
+
+# Outros
+*.log

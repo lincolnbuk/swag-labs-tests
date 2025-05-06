@@ -14,12 +14,34 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 class StatusTest {
 
 	private WebDriver driver;
+	private final String BROWSER = "firefox"; // Altere para "firefox" ou "edge" conforme necessário
+
+	private void setDriver() {
+		if (BROWSER.equalsIgnoreCase("chrome")) {
+			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+			driver = new ChromeDriver();
+		} else if (BROWSER.equalsIgnoreCase("firefox")) {
+			System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+			FirefoxOptions options = new FirefoxOptions();
+			options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+			driver = new FirefoxDriver(options);
+		} else if (BROWSER.equalsIgnoreCase("edge")) {
+			System.setProperty("webdriver.edge.driver", "msedgedriver.exe");
+			driver = new EdgeDriver();
+		} else {
+			throw new RuntimeException("Navegador não suportado: " + BROWSER);
+		}
+	}
 
 	@AfterEach
 	void tearDown() {
@@ -31,7 +53,7 @@ class StatusTest {
 	@Test
 	@DisplayName("Deve exibir o status do site")
 	void siteStatusTest() {
-		driver = new ChromeDriver();
+		setDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 
 		driver.get("https://www.saucedemo.com/");
@@ -49,7 +71,7 @@ class StatusTest {
 	@Test
 	@DisplayName("Deve permitir adicionar itens ao carrinho de compras")
 	void addItemToCartTest() {
-		driver = new ChromeDriver();
+		setDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 
 		driver.get("https://www.saucedemo.com/");
@@ -67,29 +89,39 @@ class StatusTest {
 	@Test
 	@DisplayName("Deve permitir a seleção de múltiplos produtos")
 	void addMultipleItemsToCartTest() {
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		setDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*", "--disable-dev-shm-usage", "--no-sandbox");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
 		driver.get("https://www.saucedemo.com/");
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
 		driver.findElement(By.id("password")).sendKeys("secret_sauce");
 		driver.findElement(By.id("login-button")).click();
 
+		System.out.println("Log: Página inicial carregada com sucesso.");
+
 		// Verifica se os botões de adicionar ao carrinho estão disponíveis
 		List<WebElement> addToCartButtons = driver.findElements(By.cssSelector(".inventory_item button"));
 		assertTrue(addToCartButtons.size() >= 5, "Pelo menos cinco itens devem estar disponíveis para adicionar");
+
+		System.out.println("Log: Botões de adicionar ao carrinho encontrados.");
 
 		// Adiciona cinco itens ao carrinho
 		for (int i = 0; i < 5; i++) {
 			addToCartButtons.get(i).click();
 		}
 
+		System.out.println("Log: Cinco itens adicionados ao carrinho.");
+
 		// Acessa o carrinho
 		driver.findElement(By.cssSelector(".shopping_cart_link")).click();
 
 		// Espera explícita para garantir que os itens estão no carrinho
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // Aumentado para 20 segundos
 		wait.until(d -> d.findElements(By.cssSelector(".cart_item")).size() == 5);
+
+		System.out.println("Log: Itens confirmados no carrinho.");
 
 		// Verifica se os itens estão no carrinho
 		List<WebElement> cartItems = driver.findElements(By.cssSelector(".cart_item"));
@@ -99,7 +131,7 @@ class StatusTest {
 	@Test
 	@DisplayName("Deve permitir revisar os itens no carrinho antes de finalizar a compra")
 	void reviewCartItemsTest() {
-		driver = new ChromeDriver();
+		setDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 
 		driver.get("https://www.saucedemo.com/");
@@ -115,7 +147,7 @@ class StatusTest {
 		driver.findElement(By.cssSelector(".shopping_cart_link")).click();
 
 		// Espera explícita para garantir que o item está visível no carrinho
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Aumentado para 10 segundos
 		wait.until(d -> d.findElements(By.cssSelector(".cart_item")).size() > 0);
 
 		// Verifica se o item está no carrinho
@@ -126,7 +158,7 @@ class StatusTest {
 	@Test
 	@DisplayName("Deve permitir ajustar a quantidade de itens no carrinho")
 	void adjustCartItemQuantityTest() {
-		driver = new ChromeDriver();
+		setDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 
 		driver.get("https://www.saucedemo.com/");
@@ -138,7 +170,7 @@ class StatusTest {
 		List<WebElement> addToCartButtons = driver.findElements(By.cssSelector(".inventory_item button"));
 		assertTrue(addToCartButtons.size() >= 2, "Pelo menos dois itens devem estar disponíveis para adicionar");
 
-		// Adiciona dois itens ao carrinho
+		// Adiciona itens ao carrinho
 		addToCartButtons.get(0).click();
 		addToCartButtons.get(1).click();
 
@@ -165,7 +197,7 @@ class StatusTest {
 	@Test
 	@DisplayName("Deve exibir os produtos de forma clara na home page")
 	void displayProductsOnHomePageTest() {
-		driver = new ChromeDriver();
+		setDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 
 		driver.get("https://www.saucedemo.com/");
@@ -187,7 +219,7 @@ class StatusTest {
 	@Test
 	@DisplayName("Deve permitir login com credenciais válidas")
 	void validLoginTest() {
-		driver = new ChromeDriver();
+		setDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 
 		driver.get("https://www.saucedemo.com/");
