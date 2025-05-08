@@ -24,7 +24,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 class StatusTest {
 
 	private WebDriver driver;
-	private final String BROWSER = "firefox"; // Altere para "firefox" ou "edge" conforme necessário
+	private static final String BROWSER = "firefox"; // Altere para "firefox" ou "edge" conforme necessário
 
 	private void setDriver() {
 		if (BROWSER.equalsIgnoreCase("chrome")) {
