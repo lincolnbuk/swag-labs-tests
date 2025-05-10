@@ -66,6 +66,46 @@ src/
 
 ---
 
+## 🥒 Integração com Cucumber | Cucumber Integration
+
+Este projeto suporta automação de testes com Cucumber (BDD).
+
+This project supports test automation with Cucumber (BDD).
+
+### 📂 Estrutura dos arquivos Cucumber | Cucumber Files Structure
+
+- `src/test/resources/features/` — arquivos `.feature` com cenários em Gherkin
+- `src/test/java/br/com/tcc/swag_labs/steps/` — classes Java com os steps
+- `src/test/java/br/com/tcc/swag_labs/runner/RunCucumberTest.java` — runner para execução dos testes Cucumber
+
+### 📝 Exemplo de arquivo feature | Feature file example
+
+```gherkin
+# language: pt
+Funcionalidade: Login no Swag Labs
+  Como um usuário
+  Quero fazer login no sistema
+  Para acessar os produtos
+
+  Cenário: Login com credenciais válidas
+    Dado que estou na página de login
+    Quando informo usuário "standard_user" e senha "secret_sauce"
+    E clico no botão de login
+    Então devo ver a página de produtos
+```
+
+### 🚀 Como rodar os testes Cucumber | How to run Cucumber tests
+
+Execute:
+
+```bash
+mvn test
+```
+
+Os cenários definidos nos arquivos `.feature` serão executados automaticamente.
+
+The scenarios defined in `.feature` files will be executed automatically.
+
 ## 🧪 Casos de Teste | Test Cases
 
 Automação do site Swag Labs para estes sete casos de teste:

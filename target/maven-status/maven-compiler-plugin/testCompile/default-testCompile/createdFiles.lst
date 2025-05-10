@@ -1,1 +1,3 @@
+br\com\tcc\swag_labs\runner\RunCucumberTest.class
 br\com\tcc\swag_labs\StatusTest.class
+br\com\tcc\swag_labs\steps\LoginSteps.class

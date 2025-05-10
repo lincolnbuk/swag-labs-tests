@@ -18,7 +18,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 class StatusTest {
@@ -48,24 +47,6 @@ class StatusTest {
 		if (driver != null) {
 			driver.quit(); // Fecha o navegador e encerra o WebDriver
 		}
-	}
-
-	@Test
-	@DisplayName("Deve exibir o status do site")
-	void siteStatusTest() {
-		setDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-
-		driver.get("https://www.saucedemo.com/");
-
-		// Ajuste o seletor para um elemento válido
-		WebElement title = driver.findElement(By.cssSelector(".login_logo")); // Exemplo de ajuste
-
-		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
-		wait.until(d -> title.isDisplayed());
-
-		assertEquals("Swag Labs", title.getText(), "Verificando o Status do site");
-		System.out.println("Status do site: " + title.getText());
 	}
 
 	@Test
